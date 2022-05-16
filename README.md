@@ -1,5 +1,4 @@
 # MapleCalcul
-<<<<<<< HEAD
 - - -
 # 이 계산기는 KMS 기준입니다
 - - -
