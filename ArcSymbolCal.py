@@ -25,7 +25,7 @@ UserMesoTotal = UserMeso_10K + UserMeso_100M
 
 Symbol = Arcane(SymLv)
 
-print("만렙까지 더 필요한 아케인 심볼은", ((maxLv) - Arcane(SymLv).AccNeedLv()) - UserSym, "개입니다")
+print(f"만렙까지 더 필요한 아케인 심볼은 {((maxLv) - Arcane(SymLv).AccNeedLv()) - UserSym} 개 입니다")
 
 # symbolMeso->심볼 업그레이드 가격 (억단위 + 만단위) (1/2/3/4,5,6)
 symbolMeso_1stSym = (Symbol.NeedMeso_100M_1stSym()*10000) + Symbol.NeedMeso_10K_1stSym()
@@ -48,7 +48,7 @@ if SymType == 1 :
         resultMeso_10K_1stSym += 10000
         resultMeso_100M_1stSym -= 1
     if UserMesoTotal < symbolMeso_1stSym :
-        print("만렙까지 더 필요한 메소는", math.trunc(resultMeso_100M_1stSym / 10000),"억", resultMeso_10K_1stSym,"만 메소입니다")
+        print(f"만렙까지 더 필요한 메소는 {math.trunc(resultMeso_100M_1stSym / 10000)}억 {resultMeso_10K_1stSym}만 메소입니다")
     else :
         print("만렙까지 필요한 메소는 충분합니다")
 elif SymType == 2 :
@@ -56,7 +56,7 @@ elif SymType == 2 :
         resultMeso_10K_2ndSym += 10000
         resultMeso_100M_2ndSym -= 1
     if UserMesoTotal < symbolMeso_2ndSym :
-        print("만렙까지 더 필요한 메소는", math.trunc(resultMeso_100M_2ndSym / 10000),"억", resultMeso_10K_2ndSym,"만 메소입니다")
+        print(f"만렙까지 더 필요한 메소는 {math.trunc(resultMeso_100M_2ndSym / 10000)}억 {resultMeso_10K_2ndSym}만 메소입니다")
     else :
         print("만렙까지 필요한 메소는 충분합니다")
 elif SymType == 3 :
@@ -64,7 +64,7 @@ elif SymType == 3 :
         resultMeso_10K_3rdSym += 10000
         resultMeso_100M_3rdSym -= 1
     if UserMesoTotal < symbolMeso_3rdSym :
-        print("만렙까지 더 필요한 메소는", math.trunc(resultMeso_100M_3rdSym / 10000),"억", resultMeso_10K_3rdSym,"만 메소입니다")
+        print(f"만렙까지 더 필요한 메소는 {math.trunc(resultMeso_100M_3rdSym / 10000)}억 {resultMeso_10K_3rdSym}만 메소입니다")
     else :
         print("만렙까지 필요한 메소는 충분합니다")
 else:
@@ -72,6 +72,6 @@ else:
         resultMeso_10K_otherSym += 10000
         resultMeso_100M_otherSym -= 1
     if UserMesoTotal < symbolMeso_otherSym :
-        print("만렙까지 더 필요한 메소는", math.trunc(resultMeso_100M_otherSym / 10000),"억", resultMeso_10K_otherSym,"만 메소입니다")
+        print(f"만렙까지 더 필요한 메소는 {math.trunc(resultMeso_100M_otherSym / 10000)}억 {resultMeso_10K_otherSym}만 메소입니다")
     else :
         print("만렙까지 필요한 메소는 충분합니다")
